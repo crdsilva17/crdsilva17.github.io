@@ -1,0 +1,243 @@
+/* Definir as cores da paleta */
+:root {
+    --prussian-blue: #13293D;
+    --sapphire-blue: #006494;
+    --celadon-blue: #247BA0;
+    --carolina-blue: #1B98E0;
+    --azure-color: #E8F1F2;
+}
+
+/* Estilo global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: var(--azure-color); /* Fundo da página */
+    color: var(--prussian-blue); /* Cor do texto padrão */
+}
+
+/* Cabeçalho */
+header {
+    background-color: var(--sapphire-blue); /* Fundo do cabeçalho */
+    color: var(--azure-color); /* Cor do texto do cabeçalho */
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+/* Navegação */
+nav {
+    background-color: var(--celadon-blue); /* Fundo da navegação */
+    padding: 15px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--azure-color); /* Cor dos links */
+    font-size: 1.2rem;
+}
+
+nav ul li a:hover {
+    color: var(--carolina-blue); /* Cor ao passar o mouse nos links */
+}
+
+/* Estilo listas */
+main ul {
+    text-align: left;
+    margin: 20px;
+}
+
+/* Efeito de card */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px; /* Espaçamento entre os cards */
+}
+
+/* Estilo dos cards */
+.card {
+    background-color: var(--azure-color); /* Fundo dos cards */
+    border: 1px solid var(--prussian-blue); /* Borda fina */
+    border-radius: 15px; /* Bordas arredondadas para efeito de card */
+    box-sizing: content-box;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Sombra do card */
+    padding: 50px;
+    width: calc(33% - 40px); /* Cards ocupam 33% da largura do container */
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin: 20px 0; /* Margem entre os cards */
+}
+
+.card:hover {
+    transform: translateY(-30px); /* Eleva o card ao passar o mouse */
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.25); /* Aumenta a sombra ao passar o mouse */
+}
+
+h2 {
+    color: var(--prussian-blue); /* Cor dos títulos */
+    margin-top: 10px;
+    margin-bottom: 1.5px;
+}
+
+p {
+    margin-bottom: 5px;
+}
+
+/* Cards específicos para as seções */
+#sobre.card, #formacao.card, #portfolio.card, #contato.card {
+    background-color: var(--azure-color);
+}
+
+/* Estilo da imagem */
+img {
+    width: 300px;
+    height: 250px;
+    margin-top: 20px;
+    border-radius: 50%;
+}
+
+/* Seção portfólio */
+#portfolio ul {
+    list-style: none;
+    padding: 0;
+}
+
+#portfolio ul li {
+    margin-bottom: 10px;
+}
+
+#portfolio ul li a {
+    color: var(--sapphire-blue); /* Cor dos links no portfólio */
+    text-decoration: none;
+}
+
+#portfolio ul li a:hover {
+    color: var(--carolina-blue); /* Cor ao passar o mouse nos links */
+}
+
+/* Formulário de contato */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espaço entre os campos do formulário */
+}
+
+form input, form textarea {
+    padding: 10px;
+    border: 1px solid var(--prussian-blue);
+    border-radius: 5px;
+}
+
+form input[type="submit"] {
+    background-color: var(--carolina-blue); /* Cor do botão enviar */
+    color: var(--azure-color); /* Cor do texto do botão */
+    border: none;
+    cursor: pointer;
+    padding: 15px;
+    margin: 30px;
+}
+
+form input[type="submit"]:hover {
+    background-color: var(--sapphire-blue); /* Cor ao passar o mouse no botão */
+}
+
+/* Rodapé */
+footer {
+    background-color: var(--carolina-blue); /* Fundo do rodapé */
+    color: var(--azure-color); /* Cor do texto no rodapé */
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+footer a {
+    color: var(--azure-color); /* Cor dos ícones */
+    margin: 0 10px; /* Espaçamento entre os ícones */
+    font-size: 18px; /* Tamanho dos ícones */
+    text-decoration: none;
+}
+
+footer ul li{
+    display: inline-flex; /* Colocar em linha */
+    list-style-type: none; 
+    margin: 0 5px;
+}
+
+footer a:hover {
+    color: var(--sapphire-blue); /* Cor ao passar o mouse nos ícones */
+}
+
+/* Media Queries para maior responsividade */
+
+/* Para telas menores que 1024px */
+@media (max-width: 1024px) {
+    .card {
+        width: calc(50% - 40px); /* Cards ocupam 50% da largura */
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+}
+
+/* Para telas menores que 768px */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .card {
+        width: 100%; /* Cards ocupam 100% da largura */
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header p {
+        font-size: 0.9rem;
+    }
+
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    img {
+        width: 200px;
+        height: 200px;
+    }
+}
